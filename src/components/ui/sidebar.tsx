@@ -1,9 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { Slot } from "@radix-ui/react-slot@1.1.2";
-import { VariantProps, cva } from "class-variance-authority@0.7.1";
-import { PanelLeftIcon } from "lucide-react@0.487.0";
+// FIX 1: Removed the version number @1.1.2
+import { Slot } from "@radix-ui/react-slot";
+// FIX 2: Removed the version number @0.7.1
+import { VariantProps, cva } from "class-variance-authority";
+// FIX 3: Removed the version number @0.487.0
+import { PanelLeftIcon } from "lucide-react";
 
 import { useIsMobile } from "./use-mobile";
 import { cn } from "./utils";

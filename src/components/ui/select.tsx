@@ -1,12 +1,14 @@
 "use client";
 
 import * as React from "react";
-import * as SelectPrimitive from "@radix-ui/react-select@2.1.6";
+// FIX 1: Removed the version number @2.1.6
+import * as SelectPrimitive from "@radix-ui/react-select";
+// FIX 2: Removed the version number @0.487.0
 import {
   CheckIcon,
   ChevronDownIcon,
   ChevronUpIcon,
-} from "lucide-react@0.487.0";
+} from "lucide-react";
 
 import { cn } from "./utils";
 

@@ -1,8 +1,6 @@
 "use client";
 
-// FIX 1: Removed the version number @0.4.6
 import { useTheme } from "next-themes";
-// FIX 2: Removed the version number @2.0.3
 import { Toaster as Sonner, ToasterProps } from "sonner";
 
 const Toaster = ({ ...props }: ToasterProps) => {
@@ -11,7 +9,11 @@ const Toaster = ({ ...props }: ToasterProps) => {
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
-      className="toaster group"
+      toastOptions={{
+        classNames: {
+          toast: "group",
+        },
+      }}
       style={
         {
           "--normal-bg": "var(--popover)",

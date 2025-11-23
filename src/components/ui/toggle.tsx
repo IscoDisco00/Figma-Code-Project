@@ -1,9 +1,7 @@
 "use client";
 
 import * as React from "react";
-// FIX 1: Removed the version number @1.1.2
 import * as TogglePrimitive from "@radix-ui/react-toggle";
-// FIX 2: Removed the version number @0.7.1
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "./utils";
@@ -27,7 +25,7 @@ const toggleVariants = cva(
       variant: "default",
       size: "default",
     },
-  },
+  }
 );
 
 function Toggle({
@@ -40,7 +38,7 @@ function Toggle({
   return (
     <TogglePrimitive.Root
       data-slot="toggle"
-      className={cn(toggleVariants({ variant, size, className }))}
+      className={cn(toggleVariants({ variant, size }), className)}
       {...props}
     />
   );

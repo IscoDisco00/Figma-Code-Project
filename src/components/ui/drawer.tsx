@@ -1,57 +1,54 @@
 "use client";
 
 import * as React from "react";
-import {
-  Root as DrawerRoot,
-  Trigger as DrawerTriggerPrimitive,
-  Portal as DrawerPortalPrimitive,
-  Overlay as DrawerOverlayPrimitive,
-  Content as DrawerContentPrimitive,
-  Close as DrawerClosePrimitive,
-  Title as DrawerTitlePrimitive,
-  Description as DrawerDescriptionPrimitive,
-} from "vaul";
+// FIX: Import the main Drawer component (aliased as BaseDrawer) and access all sub-primitives from it.
+import { Drawer as BaseDrawer } from "vaul";
 
 
 import { cn } from "./utils";
 
 // Root
-function Drawer(props: React.ComponentProps<typeof DrawerRoot>) {
-  return <DrawerRoot data-slot="drawer" {...props} />;
+// FIX: Use BaseDrawer as the root component
+function Drawer(props: React.ComponentProps<typeof BaseDrawer.Root>) {
+  return <BaseDrawer.Root data-slot="drawer" {...props} />;
 }
 
 // Trigger
+// FIX: Use BaseDrawer.Trigger
 function DrawerTrigger(
-  props: React.ComponentProps<typeof DrawerTriggerPrimitive>
+  props: React.ComponentProps<typeof BaseDrawer.Trigger>
 ) {
   return (
-    <DrawerTriggerPrimitive data-slot="drawer-trigger" {...props} />
+    <BaseDrawer.Trigger data-slot="drawer-trigger" {...props} />
   );
 }
 
 // Portal
+// FIX: Use BaseDrawer.Portal
 function DrawerPortal(
-  props: React.ComponentProps<typeof DrawerPortalPrimitive>
+  props: React.ComponentProps<typeof BaseDrawer.Portal>
 ) {
   return (
-    <DrawerPortalPrimitive data-slot="drawer-portal" {...props} />
+    <BaseDrawer.Portal data-slot="drawer-portal" {...props} />
   );
 }
 
 // Close
+// FIX: Use BaseDrawer.Close
 function DrawerClose(
-  props: React.ComponentProps<typeof DrawerClosePrimitive>
+  props: React.ComponentProps<typeof BaseDrawer.Close>
 ) {
-  return <DrawerClosePrimitive data-slot="drawer-close" {...props} />;
+  return <BaseDrawer.Close data-slot="drawer-close" {...props} />;
 }
 
 // Overlay
+// FIX: Use BaseDrawer.Overlay
 function DrawerOverlay({
   className,
   ...props
-}: React.ComponentProps<typeof DrawerOverlayPrimitive>) {
+}: React.ComponentProps<typeof BaseDrawer.Overlay>) {
   return (
-    <DrawerOverlayPrimitive
+    <BaseDrawer.Overlay
       data-slot="drawer-overlay"
       className={cn(
         "fixed inset-0 z-50 bg-black/50 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=open]:fade-in-0 data-[state=closed]:fade-out-0",
@@ -63,15 +60,16 @@ function DrawerOverlay({
 }
 
 // Content
+// FIX: Use BaseDrawer.Content
 function DrawerContent({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof DrawerContentPrimitive>) {
+}: React.ComponentProps<typeof BaseDrawer.Content>) {
   return (
     <DrawerPortal>
       <DrawerOverlay />
-      <DrawerContentPrimitive
+      <BaseDrawer.Content
         data-slot="drawer-content"
         className={cn(
           "group/drawer-content fixed z-50 flex h-auto flex-col bg-background",
@@ -89,7 +87,7 @@ function DrawerContent({
       >
         <div className="mx-auto mt-4 hidden h-2 w-[100px] shrink-0 rounded-full bg-muted group-data-[vaul-drawer-direction=bottom]/drawer-content:block" />
         {children}
-      </DrawerContentPrimitive>
+      </BaseDrawer.Content>
     </DrawerPortal>
   );
 }
@@ -123,12 +121,13 @@ function DrawerFooter({
 }
 
 // Title
+// FIX: Use BaseDrawer.Title
 function DrawerTitle({
   className,
   ...props
-}: React.ComponentProps<typeof DrawerTitlePrimitive>) {
+}: React.ComponentProps<typeof BaseDrawer.Title>) {
   return (
-    <DrawerTitlePrimitive
+    <BaseDrawer.Title
       data-slot="drawer-title"
       className={cn("font-semibold text-foreground", className)}
       {...props}
@@ -137,12 +136,13 @@ function DrawerTitle({
 }
 
 // Description
+// FIX: Use BaseDrawer.Description
 function DrawerDescription({
   className,
   ...props
-}: React.ComponentProps<typeof DrawerDescriptionPrimitive>) {
+}: React.ComponentProps<typeof BaseDrawer.Description>) {
   return (
-    <DrawerDescriptionPrimitive
+    <BaseDrawer.Description
       data-slot="drawer-description"
       className={cn("text-sm text-muted-foreground", className)}
       {...props}

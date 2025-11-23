@@ -7,12 +7,14 @@ import { DayPicker } from "react-day-picker";
 import { cn } from "./utils";
 import { buttonVariants } from "./button";
 
+export type CalendarProps = React.ComponentProps<typeof DayPicker>;
+
 function Calendar({
   className,
   classNames,
   showOutsideDays = true,
   ...props
-}: React.ComponentProps<typeof DayPicker>) {
+}: CalendarProps) {
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
@@ -60,13 +62,17 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        // override only the nav icons (correct API)
-        IconLeft: () => <ChevronLeft className="size-4" />,
-        IconRight: () => <ChevronRight className="size-4" />,
+        Chevron: (props) => {
+          if (props.orientation === "left") {
+            return <ChevronLeft className="size-4" />;
+          }
+          return <ChevronRight className="size-4" />;
+        },
       }}
       {...props}
     />
   );
 }
+Calendar.displayName = "Calendar";
 
 export { Calendar };

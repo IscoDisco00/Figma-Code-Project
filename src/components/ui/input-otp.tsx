@@ -1,8 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { OTPInput, OTPInputContext } from "input-otp@1.4.2";
-import { MinusIcon } from "lucide-react@0.487.0";
+// FIX 1: Removed the version number @1.4.2
+import { OTPInput, OTPInputContext } from "input-otp";
+// FIX 2: Removed the version number @0.487.0
+import { MinusIcon } from "lucide-react";
 
 import { cn } from "./utils";
 
@@ -44,7 +46,13 @@ function InputOTPSlot({
   index: number;
 }) {
   const inputOTPContext = React.useContext(OTPInputContext);
-  const { char, hasFakeCaret, isActive } = inputOTPContext?.slots[index] ?? {};
+  
+  // FIX 3 (TS2339): The context object can be null or undefined. We ensure we check 
+  // the context and slots existence before destructuring.
+  const slotData = inputOTPContext?.slots?.[index];
+  const char = slotData?.char;
+  const hasFakeCaret = slotData?.hasFakeCaret;
+  const isActive = slotData?.isActive;
 
   return (
     <div

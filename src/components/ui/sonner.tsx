@@ -1,7 +1,9 @@
 "use client";
 
-import { useTheme } from "next-themes@0.4.6";
-import { Toaster as Sonner, ToasterProps } from "sonner@2.0.3";
+// FIX 1: Removed the version number @0.4.6
+import { useTheme } from "next-themes";
+// FIX 2: Removed the version number @2.0.3
+import { Toaster as Sonner, ToasterProps } from "sonner";
 
 const Toaster = ({ ...props }: ToasterProps) => {
   const { theme = "system" } = useTheme();

@@ -1,4 +1,5 @@
-import { CheckCircle2, Award, Shield, Heart } from "lucide-react";
+// FIX: Commented out 'CheckCircle2' as it is declared but never used (TS6133 error)
+import { /* CheckCircle2, */ Award, Shield, Heart } from "lucide-react";
 
 export function Stats() {
   const pillars = [

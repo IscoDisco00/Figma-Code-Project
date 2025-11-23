@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
-import { Menu, Phone, Mail } from "lucide-react";
+// FIX: Commented out 'Mail' as it is declared but never used (TS6133 error)
+import { Menu, Phone /*, Mail */ } from "lucide-react"; 
 import { useState } from "react";
 // FIXED: Changed the path to the standard public folder reference
 import vertixLogo from "/35c21d607d287605838a5dbe9c84182974dc5cfc.png"; 

@@ -65,7 +65,8 @@ export function Hero() {
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1740914994657-f1cdffdc418e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXJlaG91c2UlMjB3b3JrZXIlMjBsb2dpc3RpY3N8ZW58MXx8fHwxNzYyNjc1Mjk5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                 alt="Warehouse and logistics professionals at work"
-                className="w-full h-full object-cover"
+                // Ensure the object-cover classes are on the image
+                className="w-full h-full object-cover" 
               />
             </div>
           </div>

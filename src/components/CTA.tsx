@@ -59,9 +59,9 @@ export function CTA() {
             Prefer to speak with someone directly?
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a href="tel:02080507080" className="flex items-center gap-2 hover:text-blue-200 transition-colors">
+            <a href="tel:+44 7493 940362" className="flex items-center gap-2 hover:text-blue-200 transition-colors">
               <Phone className="w-5 h-5" />
-              <span>020 8050 7080</span>
+              <span>+44 7493 940362</span>
             </a>
             <a href="mailto:info@vertix.co.uk" className="flex items-center gap-2 hover:text-blue-200 transition-colors">
               <Mail className="w-5 h-5" />

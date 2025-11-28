@@ -219,8 +219,8 @@ export function About() {
               </div>
               <h4 className="text-blue-900 mb-2">Call Us</h4>
               <p className="text-gray-600">
-                <a href="tel:02080507080" className="hover:text-blue-600 transition-colors">
-                  020 8050 7080
+                <a href="tel:+44 7493 940362" className="hover:text-blue-600 transition-colors">
+                 +44 7493 940362
                 </a>
                 <br />
                 <a href="tel:+447493940362" className="hover:text-blue-600 transition-colors">

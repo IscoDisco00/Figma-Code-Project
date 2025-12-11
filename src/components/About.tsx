@@ -49,9 +49,8 @@ export function About() {
             Your Partner in Workforce Solutions
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto mb-8">
-            Vertix Group is a new force in warehouse and logistics staffing, built on a commitment 
-            to excellence and personalized service. We connect skilled professionals with leading 
-            companies across the UK, delivering quality placements you can depend on.
+           Vertix Group specializes in warehouse and logistics staffing. 
+           Built on a commitment to excellence and personalized service, we connect skilled professionals with leading companies across the UK, delivering quality placements you can depend on.
           </p>
         </div>
 
@@ -153,7 +152,7 @@ export function About() {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+44 7493 940362"
+                      placeholder="02036426402"
                       className="mt-1"
                     />
                   </div>
@@ -219,12 +218,12 @@ export function About() {
               </div>
               <h4 className="text-blue-900 mb-2">Call Us</h4>
               <p className="text-gray-600">
-                <a href="tel:+44 7493 940362" className="hover:text-blue-600 transition-colors">
-                 +44 7493 940362
+                <a href="tel:02036426402" className="hover:text-blue-600 transition-colors">
+                 02036426402
                 </a>
                 <br />
                 <a href="tel:+447493940362" className="hover:text-blue-600 transition-colors">
-                  +44 7493 940362
+                 
                 </a>
               </p>
             </CardContent>
@@ -237,9 +236,9 @@ export function About() {
               </div>
               <h4 className="text-blue-900 mb-2">Office Hours</h4>
               <p className="text-gray-600">
-                Monday - Friday: 8am - 6pm<br />
-                Saturday: 9am - 3pm<br />
-                Sunday: Closed
+                Monday - Friday: 8am - 8pm<br />
+                Saturday: 9am - 5pm<br />
+                Sunday: 9am - 5pm
               </p>
             </CardContent>
           </Card>

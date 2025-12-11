@@ -46,9 +46,9 @@ export function Header() {
           <div className="hidden md:flex items-center gap-4">
             <div className="flex items-center gap-2 text-gray-600">
               <Phone className="w-4 h-4" />
-              <span>+44 7493 940362</span>
+              <span>02036426402</span>
             </div>
-            <Button>Get Started</Button>
+            <Button>Call Us</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,7 +84,7 @@ export function Header() {
               </a>
               <div className="flex items-center gap-2 text-gray-600">
                 <Phone className="w-4 h-4" />
-                <span>+44 7493 940362</span>
+                <span>02036426402</span>
               </div>
               <Button className="w-full">Get Started</Button>
             </nav>
